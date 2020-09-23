@@ -2,52 +2,22 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Sample FirebaseUI App</title>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"/>
+    <title>Log into Minty</title>
+    <script src="script.js" type="module"></script>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-   <h1>Welcome to My Awesome App</h1>
-  <div id="firebaseui-auth-container"></div>
-  <div id="loader">Loading...</div>
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyBnXkbaED2AeInnZItginGOEVFlCrRk1s4",
-        authDomain: "minty-70da2.firebaseapp.com",
-        databaseURL: "https://minty-70da2.firebaseio.com",
-        projectId: "minty-70da2",
-        storageBucket: "minty-70da2.appspot.com",
-        messagingSenderId: "887993313270",
-        appId: "1:887993313270:web:fb6d3634c36f93845089d7",
-        measurementId: "G-63RV1J0LJK"
-      };
-      firebase.initializeApp(firebaseConfig);
-      firebase.auth();
-    </script>
-    <script>
-      var ui = new firebaseui.auth.AuthUI(firebase.auth()),
-          uiConfig = {
-              callbacks: {
-                  signInSuccessWithAuthResult: function(i, e) {
-                      return !0
-                  },
-                  uiShown: function() {
-                      document.getElementById("loader").style.display = "none"
-                  }
-              },
-              signInFlow: "popup",
-              signInSuccessUrl: "<url-to-redirect-to-on-success>",
-              signInOptions: [{
-                  provider: "firebase.auth.GoogleAuthProvider.887993313270-v8i48fujns72g84b9sdac3n4og5q7s99.apps.googleusercontent.com"
-              }],
-              tosUrl: "<your-tos-url>",
-              privacyPolicyUrl: "<your-privacy-policy-url>"
-          };
-      ui.start("#firebaseui-auth-container", uiConfig);
-    </script>
+    <div class="card">
+      <span class="master-h4 minty-logo"></span>
+      <h2 class="matter-h4">Log into Minty</h2>
+      <button class="matter-button-outlined signin">
+        <div class="logo-chip">
+          <span class="google-logo"></span>
+        </div>
+        <p class="logo-color">Sign in with Google</p>
+      </button>
+      <div id="status"></div>
+    </div>
   </body>
 </html>
