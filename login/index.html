@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Sample FirebaseUI App</title>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
+    />
     <script>
-      ui.start('#firebaseui-auth-container', {
-  signInOptions = [
-    {
-      provider: "firebase.auth.GoogleAuthProvider.887993313270-v8i48fujns72g84b9sdac3n4og5q7s99.apps.googleusercontent.com",
-      customParameters: {
-        prompt: 'select_account'
-      }}}]});
-
+           ui.start('#firebaseui-auth-container', {
+       signInOptions = [
+         {
+           provider: "firebase.auth.GoogleAuthProvider.887993313270-v8i48fujns72g84b9sdac3n4og5q7s99.apps.googleusercontent.com",
+           customParameters: {
+             prompt: 'select_account'
+      }}]});
     </script>
   </head>
   <body>
     <h1>Welcome to My Awesome App</h1>
-    <div id="firebaseui-auth-container"></div>    
+    <div id="firebaseui-auth-container"></div>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
