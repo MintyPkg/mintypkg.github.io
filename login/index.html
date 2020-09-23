@@ -4,20 +4,7 @@
     <meta charset="UTF-8" />
     <title>Sample FirebaseUI App</title>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
-    />
-    <script>
-           ui.start('#firebaseui-auth-container', {
-       signInOptions = [
-         {
-           provider: "firebase.auth.GoogleAuthProvider.887993313270-v8i48fujns72g84b9sdac3n4og5q7s99.apps.googleusercontent.com",
-           customParameters: {
-             prompt: 'select_account'
-      }}]});
-    </script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"/>
   </head>
   <body>
     <h1>Welcome to My Awesome App</h1>
@@ -37,6 +24,18 @@
         appId: "1:887993313270:web:fb6d3634c36f93845089d7",
         measurementId: "G-63RV1J0LJK"
       };
+      firebase.initializeApp(firebaseConfig);
+      firebase.auth();
+    </script>
+    <script>var ui = new firebaseui.auth.AuthUI(firebase.auth());</script>
+    <script>
+           ui.start('#firebaseui-auth-container', {
+       signInOptions: [
+         {
+           provider: "firebase.auth.GoogleAuthProvider.887993313270-v8i48fujns72g84b9sdac3n4og5q7s99.apps.googleusercontent.com",
+           customParameters: {
+             prompt: 'select_account'
+      }}]});
     </script>
   </body>
 </html>
