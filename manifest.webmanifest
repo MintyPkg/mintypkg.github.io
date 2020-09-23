@@ -1,0 +1,26 @@
+{
+  "short_name": "Minty",
+  "name": "Minty Packager",
+  "description": "The premium Papercuts experience.",
+  "icons": [
+    {
+      "src": "Logo.png",
+      "type": "image/png",
+      "sizes": "874x874"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#57ffb2",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#57ffb2",
+  "shortcuts": [
+    {
+      "name": "Minty Packager",
+      "short_name": "Minty",
+      "description": "The premium Papercuts experience.",
+      "url": "/",
+      "icons": [{ "src": "/Logo.png", "sizes": "874x874" }]
+    }
+  ]
+}
