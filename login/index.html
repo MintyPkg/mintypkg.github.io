@@ -7,8 +7,9 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"/>
   </head>
   <body>
-    <h1>Welcome to My Awesome App</h1>
-    <div id="firebaseui-auth-container"></div>
+   <h1>Welcome to My Awesome App</h1>
+  <div id="firebaseui-auth-container"></div>
+  <div id="loader">Loading...</div>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
@@ -27,15 +28,26 @@
       firebase.initializeApp(firebaseConfig);
       firebase.auth();
     </script>
-    <script>var ui = new firebaseui.auth.AuthUI(firebase.auth());</script>
     <script>
-           ui.start('#firebaseui-auth-container', {
-       signInOptions: [
-         {
-           provider: "firebase.auth.GoogleAuthProvider.887993313270-v8i48fujns72g84b9sdac3n4og5q7s99.apps.googleusercontent.com",
-           customParameters: {
-             prompt: 'select_account'
-      }}]});
+      var ui = new firebaseui.auth.AuthUI(firebase.auth()),
+          uiConfig = {
+              callbacks: {
+                  signInSuccessWithAuthResult: function(i, e) {
+                      return !0
+                  },
+                  uiShown: function() {
+                      document.getElementById("loader").style.display = "none"
+                  }
+              },
+              signInFlow: "popup",
+              signInSuccessUrl: "<url-to-redirect-to-on-success>",
+              signInOptions: [{
+                  provider: "firebase.auth.GoogleAuthProvider.887993313270-v8i48fujns72g84b9sdac3n4og5q7s99.apps.googleusercontent.com"
+              }],
+              tosUrl: "<your-tos-url>",
+              privacyPolicyUrl: "<your-privacy-policy-url>"
+          };
+      ui.start("#firebaseui-auth-container", uiConfig);
     </script>
   </body>
 </html>
