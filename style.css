@@ -1,0 +1,170 @@
+
+
+/* CSS files add styling rules to your content */
+@import url("https://res.cloudinary.com/finnhvman/raw/upload/matter/matter-0.2.2.min.css"); * {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --matter-theme-rgb: 0, 205, 171;
+    --matter-onsurface-rgb:2, 48, 41;
+}
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    --matter-helper-theme: var(--matter-theme-rgb,var(--matter-primary-rgb,33,150,243)); color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(var(--matter-helper-theme),0.05), rgba(var(--matter-helper-theme),0.05)), linear-gradient(45deg, white, white);
+    color:rgba(var(--matter-onsurface-rgb,0,0,0),0.8);
+}
+
+.google-logo {
+    background-image: url(https://cdn.glitch.com/af261e83-0280-4f98-8c0e-6e69d0b7594f%2Fg-logo.png?v=1600888002466);
+}
+
+.github-logo {
+    background-image: url(https://cdn.glitch.com/af261e83-0280-4f98-8c0e-6e69d0b7594f%2FGitHub-Mark-120px-plus.png?v=1600992711566);
+}
+
+.logo-chip > *:first-child {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+span.minty-logo {
+    width: 2em;
+    height: 2em;
+    background: url('https://cdn.glitch.com/af261e83-0280-4f98-8c0e-6e69d0b7594f%2FIMG_6869-removebg%20(1).png');
+    border-radius: 20%;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+}
+
+.logo-chip {
+    display: inline-flex;
+    font-size: 28px;
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    left: -16px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.signin, .signout, .buy-minty, .activate-minty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    color:rgba(var(--matter-onsurface-rgb,0,0,0),0.8);
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    text-decoration:none;
+}
+
+.signin{
+  display: none;
+}
+
+.card {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    width: 22rem;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    min-height: 23rem;
+    grid-template-rows: 4rem;
+}
+
+.card>* {
+    margin: 0;
+}
+
+.status {
+    color:rgba(var(--matter-onsurface-rgb,0,0,0),0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --matter-onsurface-rgb:216, 237, 234;
+    }
+
+    body {
+        background: linear-gradient(rgba(var(--matter-helper-theme),0.05), rgba(var(--matter-helper-theme),0.05)), linear-gradient(45deg, #60CBB0, #60CBB0);
+    }
+
+    .card {
+        background: #000;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .card {
+        position: fixed;
+        width: 100%;
+        height: calc(100% - 3rem);
+        bottom: 0;
+        overflow: auto;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 4rem;
+    font-size: 2rem;
+}
+
+img.avatar {
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#status>* {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
+  color: inherit;
+  text-decoration: underline;
+}
