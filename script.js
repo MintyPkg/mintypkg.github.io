@@ -155,6 +155,7 @@ const PUBLIC_STRIPE_KEY =
     }
   } catch (e) {
     console.error(e);
+    firebase.auth().onAuthStateChanged(()=>{})
     document.getElementById(
       "status"
     ).textContent = `There was an error: ${e.message}`;
