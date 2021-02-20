@@ -1,12 +1,11 @@
 /* global firebase Stripe */
 
-const PUBLIC_STRIPE_KEY =
-  "pk_test_51IMlcNF4xI825b1kf0ajPLuDrfSqQlGUPB63mDJyVLO41qrlkJq45S1QlRTkBpFm4BqkBNv4FiCiT50Lck3gVqE400CNChLgK4";
-
 (async () => {
+  const status = document.getElementById("status");
+  const PUBLIC_STRIPE_KEY =
+    "pk_test_51IMlcNF4xI825b1kf0ajPLuDrfSqQlGUPB63mDJyVLO41qrlkJq45S1QlRTkBpFm4BqkBNv4FiCiT50Lck3gVqE400CNChLgK4";
   try {
     const params = new URLSearchParams(location.search);
-    const status = document.getElementById("status");
     function loginCheck() {
       if (!!firebase.auth().currentUser) {
         console.log("Logged in!", firebase.auth().currentUser);
@@ -151,13 +150,12 @@ const PUBLIC_STRIPE_KEY =
       document
         .querySelectorAll(".signout")
         .forEach(e => (e.style.display = "none"));
-      document.getElementById("status").textContent = "";
+      if(!status.classList.contains("error")) document.getElementById("status").textContent = "";
     }
   } catch (e) {
     console.error(e);
     firebase.auth().onAuthStateChanged(()=>{})
-    document.getElementById(
-      "status"
-    ).textContent = `There was an error: ${e.message}`;
+    status.textContent = `There was an error: ${e.message}`;
+    status.classList.add("error")
   }
 })();
