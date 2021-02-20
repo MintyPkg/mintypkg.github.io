@@ -1,1 +1,0 @@
-# mintypkg.github.io
