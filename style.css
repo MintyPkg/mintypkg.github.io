@@ -11,7 +11,10 @@ body, html {
 }
 
 :root {
-    --matter-theme-rgb: 0, 205, 171; --matter-onsurface-rgb:2, 48, 41; }
+    --matter-theme-rgb: 0, 205, 171;
+    --matter-onsurface-rgb:2, 48, 41;
+    --matter-surface-rgb:255, 255, 255;
+}
 
 body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -20,8 +23,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(rgba(var(--matter-helper-theme),0.05), rgba(var(--matter-helper-theme),0.05)), linear-gradient(45deg, white, white);
     color: rgba(var(--matter-onsurface-rgb,0,0,0),0.8);
+}
+
+body {
+    background: linear-gradient(rgba(var(--matter-helper-theme),0.35), rgba(var(--matter-helper-theme),0.35)), linear-gradient(0deg, rgb(var(--matter-surface-rgb)), rgb(var(--matter-surface-rgb)));
 }
 
 .google-logo {
@@ -85,7 +91,7 @@ span.minty-logo {
 
 .card {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-    background: #fff;
+    background: rgb(var(--matter-surface-rgb));
     border-radius: 1.5rem;
     padding: 1rem;
     width: 22rem;
@@ -108,14 +114,7 @@ span.minty-logo {
 @media (prefers-color-scheme: dark) {
     :root {
         --matter-onsurface-rgb:216, 237, 234;
-    }
-
-    body {
-        background: linear-gradient(rgba(var(--matter-helper-theme),0.05), rgba(var(--matter-helper-theme),0.05)), linear-gradient(45deg, #60CBB0, #60CBB0);
-    }
-
-    .card {
-        background: #242424;
+        --matter-surface-rgb:0, 0, 0;
     }
 }
 
