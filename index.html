@@ -5,7 +5,11 @@
     <title>Minty</title>
     <link type="text/css" rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" 
+      type="image/png" 
+      href="https://cdn.glitch.com/af261e83-0280-4f98-8c0e-6e69d0b7594f%2FIMG_6869-removebg%20(1).png"><!-- lol I know -->
   </head>
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
   <body>
     <div class="card">
       <h2 class="matter-h4 logo-wrap"><span class="minty-logo"></span><span class="logo-text">Minty</span></h2>
@@ -27,7 +31,7 @@
       </button>
     </div>
     <footer><p>
-      Created by the <a class="footer" href="https://github.com/orgs/MintyPkg/people">Minty team</a>
+      With &#10084;&#65039; From the <a class="footer" href="https://github.com/orgs/MintyPkg/people">Minty team</a>
       </p></footer>
     <script src="https://js.stripe.com/v3/"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
@@ -35,5 +39,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      twemoji.parse(document.body);
+    </script>
   </body>
 </html>
