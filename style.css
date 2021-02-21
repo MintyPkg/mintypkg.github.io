@@ -178,3 +178,7 @@ a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
     text-decoration: none;
     font-weight: bold;
 }
+
+.emoji {
+    size: 1em;   
+}
