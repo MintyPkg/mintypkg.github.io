@@ -175,5 +175,6 @@ img.avatar {
 
 a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: bold;
 }
