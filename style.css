@@ -1,5 +1,6 @@
-/* CSS files add styling rules to your content */
-@import url("https://res.cloudinary.com/finnhvman/raw/upload/matter/matter-0.2.2.min.css"); * {
+@import url("https://res.cloudinary.com/finnhvman/raw/upload/matter/matter-0.2.2.min.css");
+
+* {
     box-sizing: border-box;
 }
 
@@ -179,8 +180,9 @@ a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
 }
 
 .emoji {
-    height: 1em;
-    width: 1em;
+    height: 1.2em;
+    width: 1.2em;
+    margin-bottom: -0.15em;
 }
 
 .matter-button-outlined:disabled {
