@@ -30,9 +30,9 @@
         Sign Out
       </button>
     </div>
-    <footer><p>
+    <div id="emoji"><footer><p>
       With &#10084;&#65039; From the <a class="footer" href="https://github.com/orgs/MintyPkg/people">Minty team</a>
-      </p></footer>
+      </p></footer></div>
     <script src="https://js.stripe.com/v3/"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
@@ -40,20 +40,14 @@
     <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <script src="script.js"></script>
     <script>
-var div = document.createElement('div');
-document.body.appendChild(div);
-
+var div = document.getElementById('emoji');
 twemoji.parse(document.body);
-
 var img = div.querySelector('img');
-
-// note the div is preserved
 img.parentNode === div; // true
-
-img.src;        // https://twemoji.maxcdn.com/v/latest/72x72/2764.png
-img.alt;        // \u2764\uFE0F
-img.className;  // emoji
-img.draggable;  // false
+img.src;
+img.alt;
+img.className;
+img.draggable;
     </script>
   </body>
 </html>
