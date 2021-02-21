@@ -31,7 +31,7 @@
       </button>
     </div>
     <div id="emoji"><footer><p>
-      With &#10084;&#65039; From the <a class="footer" href="https://github.com/orgs/MintyPkg/people">Minty team</a>
+      With <span class="emoji">&#10084;&#65039;</span> From the <a class="footer" href="https://github.com/orgs/MintyPkg/people">Minty team</a>
       </p></footer></div>
     <script src="https://js.stripe.com/v3/"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
@@ -43,7 +43,6 @@
 var div = document.getElementById('emoji');
 twemoji.parse(document.body);
 var img = div.querySelector('img');
-img.parentNode === div; // true
 img.src;
 img.alt;
 img.className;
