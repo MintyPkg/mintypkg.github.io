@@ -128,7 +128,7 @@ span.minty-logo {
         overflow: auto;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
     }
 
     footer {
@@ -191,5 +191,7 @@ a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
 
 .footer-text {
   word-wrap: break-word;
-  padding: 2em;
+  padding-top: 1%;
+  padding-left: 30vw;
+  padding-right: 30vw;
 }
