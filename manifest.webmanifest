@@ -1,0 +1,20 @@
+{
+  "name": "Minty",
+  "short_name": "Minty",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#00cdab",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "1024x1024",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
