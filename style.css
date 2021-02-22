@@ -189,7 +189,7 @@ a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
     color: rgba(var(--matter-onsurface-rgb,0,0,0),.6);
 }
 
-span.tooltip {
+.tooltip {
     visibility: hidden;
     background: rgb(var(--matter-surface-rgb));
     border-radius: 30%;
@@ -197,6 +197,6 @@ span.tooltip {
     position: absolute;
     z-index: 1;
 }
-span.tooltip:hover {
+.tooltip:hover {
     visibility: visible;
 }
