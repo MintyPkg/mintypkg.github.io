@@ -1,5 +1,8 @@
 /* global firebase Stripe */
 
+console.warn('\n███████╗████████╗ ██████╗ ██████╗ ██╗\n██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██║\n███████╗   ██║   ██║   ██║██████╔╝██║\n╚════██║   ██║   ██║   ██║██╔═══╝ ╚═╝\n███████║   ██║   ╚██████╔╝██║     ██╗\n╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝\n Don\'t Type Anything in This Box Unless You Know What You\'re Doing. And no, you cannot get Minty for free!')
+
+
 (async () => {
   const status = document.getElementById("status");
   const PUBLIC_STRIPE_KEY =
