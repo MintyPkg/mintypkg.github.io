@@ -188,15 +188,3 @@ a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
 .matter-button-outlined:disabled {
     color: rgba(var(--matter-onsurface-rgb,0,0,0),.6);
 }
-
-.tooltip {
-    visibility: hidden;
-    background: rgb(var(--matter-surface-rgb));
-    border-radius: 30%;
-    padding: 1em;
-    position: absolute;
-    z-index: 1;
-}
-.tooltip:hover {
-    visibility: visible;
-}
