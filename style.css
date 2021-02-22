@@ -115,7 +115,7 @@ span.minty-logo {
 @media (prefers-color-scheme: dark) {
     :root {
         --matter-onsurface-rgb:216, 237, 234;
-        --matter-surface-rgb:36,36,36;
+        --matter-surface-rgb:36, 36, 36;
     }
 }
 
