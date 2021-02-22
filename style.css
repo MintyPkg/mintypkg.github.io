@@ -191,6 +191,7 @@ a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
 
 .footer-text {
   word-wrap: break-word;
+  text-align: center;
   padding-top: 1%;
   padding-left: 30vw;
   padding-right: 30vw;
