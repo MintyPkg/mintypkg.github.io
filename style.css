@@ -188,3 +188,8 @@ a:link.footer, a:hover.footer, a:visited.footer, a:active.footer {
 .matter-button-outlined:disabled {
     color: rgba(var(--matter-onsurface-rgb,0,0,0),.6);
 }
+
+.footer-text {
+  word-wrap: break-word;
+  padding: 2em;
+}
