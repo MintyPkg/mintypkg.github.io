@@ -14,17 +14,9 @@
       <h2 class="matter-h4" id="title">Loading...</h2>
     </div>
     <footer><p>
-      With <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" draggable="false" class="emoji"><title>love</title><path fill="#DD2E44" d="M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z"/></svg> by the <a class="footer" href="https://github.com/orgs/MintyPkg/people">Minty team</a>
+      With <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" draggable="false" class="emoji"><title>love</title><path fill="#DD2E44" d="M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z"/></svg> from the <a class="footer" href="https://github.com/orgs/MintyPkg/people">Minty team</a>
     </p></footer>
     <script>
-      checkVersion = function () {
-          var agent = window.navigator.userAgent,
-          start = agent.indexOf( ‘OS ‘ );
-          if( ( agent.indexOf( ‘iPhone’ ) > -1 || agent.indexOf( ‘iPad’ ) > -1 ) && start > -1 ){
-              return window.Number( agent.substr( start + 3, 3 ).replace( ‘_’, ’.’ ) );
-          }
-          return 0;
-      }
       const urlParams = new URLSearchParams(window.location.search);
       const title = urlParams.get('title');
       document.title = title;
@@ -39,7 +31,7 @@
       link.href = shortcutIcon;*/
       document.getElementById("title").innerHTML = title;
       const icloudUrl = decodeURIComponent(urlParams.get('icloudUrl'));
-      let regEx = '[^\/+$]';
+      let regEx = '[0-z]+$';
       const apiUrl = 'https://www.icloud.com/shortcuts/api/records/' + icloudUrl.match(regEx);
       const http = new XMLHttpRequest();
       http.open("GET", apiUrl);
