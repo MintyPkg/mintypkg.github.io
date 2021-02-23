@@ -20,25 +20,19 @@
       const urlParams = new URLSearchParams(window.location.search);
       const title = urlParams.get('title');
       document.title = title;
-      /*
-      const shortcutIcon = urlParams.get('shortcutIcon');
-      var link = document.querySelector("link[rel~='icon']");
-      if (!link) {
-        link = document.createElement('link');
-        link.rel = 'icon';
-        document.getElementsByTagName('head')[0].appendChild(link);
-      };
-      link.href = shortcutIcon;*/
       document.getElementById("title").innerHTML = title;
       const icloudUrl = decodeURIComponent(urlParams.get('icloudUrl'));
       let regEx = '[0-z]+$';
       const apiUrl = 'https://www.icloud.com/shortcuts/api/records/' + icloudUrl.match(regEx);
-      const http = new XMLHttpRequest();
-      http.open("GET", apiUrl);
-      http.send();
-      http.onreadystatechange = (e) => {
-        console.log(http.responseText)
+      const CORSUrl = 'https://minty-backend-minty-package-manager.vercel.app/';
+      const Http = new XMLHttpRequest();
+      const url= CORSUrl + apiUrl;
+      Http.open("GET", url);
+      Http.send();
+      Http.onreadystatechange = (e) => {
+        console.log(Http.responseText)
       }
+})();
     </script>
   </body>
 </html>
