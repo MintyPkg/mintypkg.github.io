@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 span.minty-logo {
     width: 2em;
     height: 2em;
@@ -7,39 +6,5 @@ span.minty-logo {
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 0.5rem;
-    top: -0.3em;
-}
-header.navbar {
-  width: 90%;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  background-color: #333;
-  color: #FFF;
-  border-radius: 4em;
-  list-style-type: none;
-  padding: 2em;
-  margin: 0;
-  margin-right: 1em;
-  align-self: flex-start;
-}
-ul {
-    text-align: center;
-    position: relative;
-    padding: 0.5em
-}
-li {
-  display: inline;
-  float:right;
-  padding-right: 4em;
-}
-span.minty-logo {
-  float:left;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
-.push-up {
-  bottom: 0.8em;
+    margin: auto;
 }
