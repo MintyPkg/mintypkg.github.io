@@ -1,0 +1,14 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #191919;
+  }
+  p, h2 {
+    color: #d3d3d3;
+  }
+  .About {
+    background: #242424;
+  }
+  .About-text {
+    color: #a9a9a9;
+  }
+}
