@@ -6,7 +6,7 @@
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
-    
+
 }
 
 .blur {
@@ -31,13 +31,13 @@
 }
 .Scrolled:hover {
     opacity: 0.7;
-    
+
 }
 
 
 
 .HeaderScrolled {
-    background: rgba(44,177,190, 0.90);
+    background: #06dac1;
     padding: 15px 0;
     color: white;
 }
@@ -82,7 +82,7 @@
     text-transform: uppercase;
 
 }
- 
+
 
 @media (max-width: 640px) {
     .Header {
