@@ -17,11 +17,26 @@ span.minty-logo {
   color: #212121 !important;
 }
 
-@media (prefers-color-scheme dark) {
-  .mdl-layout__header {
-    background: #212121;
-  }
-  .mdl-navigation__link {
-    color: #fff !important;
-  }
+.mdl-layout__header .mdl-layout__drawer-button {
+  color: #212121;
+}
+.page-content {
+  text-align: center;
+}
+.big {
+  height: 4em !important;
+  width: 4em !important;
+}
+.landing-text {
+  font-size: 8em;
+  font-weight: bold;
+}
+.landing-text-2 {
+  font-size: 2em;
+  padding: 0.5em;
+  font-weight: lighter;
+}
+img {
+  width: 100%;
+  height: auto;
 }
