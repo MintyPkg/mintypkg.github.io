@@ -2,13 +2,6 @@
 
 console.warn('\n███████╗████████╗ ██████╗ ██████╗ ██╗\n██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██║\n███████╗   ██║   ██║   ██║██████╔╝██║\n╚════██║   ██║   ██║   ██║██╔═══╝ ╚═╝\n███████║   ██║   ╚██████╔╝██║     ██╗\n╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝\n Don\'t Type Anything in This Box Unless You Know What You\'re Doing. And no, you cannot get Minty for free!');
 
-function copyToken() {
-  var copyText = await user.getIdToken(true);
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand("copy");
-}
-
 
 (async () => {
   const status = document.getElementById("status");
@@ -126,7 +119,9 @@ function copyToken() {
             buyMintyBtn.style.display = "none";
           }
           buyMintyBtn.textContent = "You own a Minty license.";
-          activateMintyBtn.onclick = "copytoken()";
+          activateMintyBtn.href =
+            "shortcuts://x-callback-url/run-shortcut?name=Minty&input=text&text=" +
+            encodeURIComponent(JSON.stringify({ action: "activate", token }));
           activateMintyBtn.textContent = "Activate Minty";
         } else {
           buyMintyBtn.disabled = false;
