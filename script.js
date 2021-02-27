@@ -126,7 +126,7 @@ function copyToken() {
             buyMintyBtn.style.display = "none";
           }
           buyMintyBtn.textContent = "You own a Minty license.";
-          activateMintyBtn.onclick = "copytoken()";
+          activateMintyBtn.onclick = "copyToken()";
           activateMintyBtn.textContent = "Activate Minty";
         } else {
           buyMintyBtn.disabled = false;
